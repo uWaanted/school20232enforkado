@@ -4,11 +4,7 @@ const kaushan = Kaushan_Script({
     subsets: ['latin'],
     weight: '400'
 })
-
-
-
-export default function () {
-
+export default function Footer () {
     return (
         <footer id="contato" className="mt-16">
             <div className="flex justify-center text-4xl text-center space-x-4">
@@ -80,9 +76,8 @@ export default function () {
                 </a>
             </div>
             <div className="text-center text-white mt-8 border-t">
-                <p className={`${kaushan.className} text-center`}>©Copyright UTFPR 2023-2 by Alunos de Web all rights reserved!</p>
+                <p >©Copyright UTFPR 2023-2 by Alunos de Web all rights reserved!</p>
             </div>
         </footer>
-
     )
 }
