@@ -76,7 +76,7 @@ export default function Footer () {
                 </a>
             </div>
             <div className="text-center text-white mt-8 border-t">
-                <p >©Copyright UTFPR 2023-2 by Alunos de Web all rights reserved!</p>
+                <p className={kaushan.className} >©Copyright UTFPR 2023-2 by Alunos de Web all rights reserved!</p>
             </div>
         </footer>
     )
