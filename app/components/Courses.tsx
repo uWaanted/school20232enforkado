@@ -3,7 +3,10 @@ export default function Courses() {
     const courses = [
         { title: "Curso de HTML", url: "/img/html.svg", description: "O curso é realizado por..." },
         { title: "Curso de CSS", url: "/img/css.svg", description: "O curso CSS é realizado por..." },
-        { title: "Curso de JS", url: "/img/js.svg", description: "O curso JSS é realizado por..." }
+        { title: "Curso de JS", url: "/img/js.svg", description: "O curso JSS é realizado por..." },
+        { title: "Curso de Robótica", url: "/img/robot.svg", description: "O curso Robótica é realizado por..." },
+        { title: "Curso de Games", url: "/img/games.svg", description: "O curso Games é realizado por..." },
+        { title: "Curso de Design", url: "/img/design.svg", description: "O curso Design é realizado por..." }
     ]
 
     return (
@@ -20,7 +23,7 @@ export default function Courses() {
                             <a href="/curso_html.html">
                                 <img className="hover:scale-105" src={course.url} alt="" />
                                 <div className="text-white text-center">
-                                    <h3>{course.title}L</h3>
+                                    <h3>{course.title}</h3>
                                     <p>{course.description}</p>
                                 </div>
                             </a>
