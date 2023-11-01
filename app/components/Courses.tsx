@@ -1,6 +1,8 @@
-export default function Courses() {
+import { sql } from "@vercel/postgres";
 
-    const courses = [
+export default async function Courses() {
+
+    const courses2 = [
         { title: "Curso de HTML", url: "/img/html.svg", description: "O curso é realizado por..." },
         { title: "Curso de CSS", url: "/img/css.svg", description: "O curso CSS é realizado por..." },
         { title: "Curso de JS", url: "/img/js.svg", description: "O curso JSS é realizado por..." },
@@ -8,6 +10,8 @@ export default function Courses() {
         { title: "Curso de Games", url: "/img/games.svg", description: "O curso Games é realizado por..." },
         { title: "Curso de Design", url: "/img/design.svg", description: "O curso Design é realizado por..." }
     ]
+
+    const { rows } = await sql`SELECT * from courses`;
 
     return (
         <main className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -17,9 +21,9 @@ export default function Courses() {
                 </h2>
             </div>
             {
-                courses.map((course) => {
+                rows.map((course) => {
                     return (
-                        <div className="bg-[#4d4d4d] rounded-md pb-2">
+                        <div key={course.id} className="bg-[#4d4d4d] rounded-md pb-2">
                             <a href="/curso_html.html">
                                 <img className="hover:scale-105" src={course.url} alt="" />
                                 <div className="text-white text-center">
