@@ -1,5 +1,7 @@
 import { sql } from "@vercel/postgres"
 
+export const revalidate =0
+
 export default async function ListCourse(){
     const { rows } = await sql`SELECT * FROM courses`; 
     return (
